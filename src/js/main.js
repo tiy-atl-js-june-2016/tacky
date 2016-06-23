@@ -1,4 +1,4 @@
-import {numbers as nums} from "./second.js";
+import {bumpNums, numbers as nums} from "./second.js";
 import {images} from "./carousel";
 import $ from 'jquery';
 
@@ -14,12 +14,13 @@ function imageTemplate (image) {
   </div>`;
 }
 
-images.forEach(function (image) {
+images.forEach(function (x) {
   var node = $(".board");
-  var imageHTML = imageTemplate(image);
+  var imageHTML = imageTemplate(x);
   node.append(imageHTML);
 });
 
+$(".carousel").on("click", bumpNums);
 
 // debugger;
 

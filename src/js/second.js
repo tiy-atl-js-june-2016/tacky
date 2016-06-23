@@ -11,10 +11,15 @@ var dog = {
   emotions: ['anxious', 'concerned', 'hungry']
 };
 
+function bumpNums () {
+  numbers = numbers.map(function (x) { return x + 1; });
+  console.log(numbers);
+}
+
 var sum = 0;
 // debugger;
 for(var i=0; i < 10; i++) {
   sum += i;
 }
 
-export {names, numbers, dog as bagel};
+export {names, numbers, bumpNums, dog as bagel};
